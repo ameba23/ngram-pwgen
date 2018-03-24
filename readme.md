@@ -15,6 +15,8 @@ I also came across this:  [kchapelier/ngram-word-generator: Word generation base
 
 However since i wanted as big a word-pool as possible I decided to just grab the english dictionary by doing `aspell dump master > words.txt` and then generated ngrams with `ngram-word-generator words.txt words_wt.json`.
 
+I wrote a script to make the word length vary, and check that the generated words are not actual english words.
+
 Heres some sample output with word length set to between 5 and 10 characters:
 ```
 $ node p.js
