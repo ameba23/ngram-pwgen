@@ -1,15 +1,17 @@
 
-## Making a random password generator
+## Making a nonsense password generator
 
 I mentioned one of the issues that came up with following the guide was using an online service to generate a memorable password.  Since Kierans offline Secret sharing seems to have proved popular we thought about making a password generator.
 
-Grabbing a bunch of words from a dictionary seemed too simple so i had a look at some other online password generators and the thing that interested me most was using nonsence words which follow similar phoneme frequencies as english words.  That is, they kind of look like they could be english words, but they're not.  Easier to remember than a random string of characters but resiliant to dictionary attacks. 
+Grabbing a bunch of words from a dictionary seemed too simple so i had a look at some other online password generators and the thing that interested me most was using nonsense words which follow similar phoneme frequencies as english words.  That is, they kind of look like they could be english words, but they're not.  Easier to remember than a random string of characters but resiliant to dictionary attacks. 
 
-The best program i found that does this is this [nonsense word generator](http://www.soybomb.com/tricks/words/).  Unfortuanately the source code is not with it, but it works using known average frequencies of phonemes (sounds) in the english language.
+The best program i found that does this is this [nonsense word generator](http://www.soybomb.com/tricks/words/).  Unfortuanately the source code is not with it, but it works using known average frequencies of phonemes (sounds) in the english language.  Somehow the words I managed to generate below just don't seem as catchy so maybe theres still work to be done.
 
 ### Using [n-grams](https://en.wikipedia.org/wiki/N-gram)
 
-I also came accross this:  [kchapelier/ngram-word-generator: Word generation based on n-gram models, and a cli utility to generate said models.](https://github.com/kchapelier/ngram-word-generator)  Which seemed to be kind of what i was looking for.  I really like the words they generated from list of french and irish first names!  But since i wanted as big a word-pool as possible I decided to just grab the english dictionary by doing `aspell dump master > words.txt` and then generated ngrams with `ngram-word-generator words.txt words_wt.json`.
+I also came across this:  [kchapelier/ngram-word-generator: Word generation based on n-gram models, and a cli utility to generate said models.](https://github.com/kchapelier/ngram-word-generator)  Which seemed to be kind of what i was looking for.  I really like the words they generated from list of french and irish first names!  
+
+However since i wanted as big a word-pool as possible I decided to just grab the english dictionary by doing `aspell dump master > words.txt` and then generated ngrams with `ngram-word-generator words.txt words_wt.json`.
 
 Heres some sample output with word length set to between 5 and 10 characters:
 ```
