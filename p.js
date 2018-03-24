@@ -11,11 +11,13 @@ var generator = makeGenerator(ngramModel);
 
 var fs = require('fs');
 
+// These are all parameter that could be set using a web form:
 var lines = 10;
 var wordsPerLine = 4;
 var minWordLength = 5;
 var maxWordLength = 10;
 
+// Create an array of the english words (is this too memory intensive?)
 var englishWords = fs.readFileSync('words.txt').toString().split("\n");
 
 function getRandomInt(min, max) {
