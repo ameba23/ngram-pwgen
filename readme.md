@@ -3,7 +3,7 @@
 
 Using an online service to generate a memorable password seems like a bit of a security risk, so we were thinking to make one people can use offline. 
 
-Grabbing a bunch of words from a dictionary seemed too simple so i had a look at some other online password generators and the thing that interested me most was using nonsense words which follow similar phoneme frequencies as english words.
+Grabbing a bunch of words from a dictionary seemed too simple so i had a look at some other online password generators and the thing that interested me most was using nonsense words which follow similar phoneme frequencies as english words.  See this [Frequency table of English phonemes](https://gist.github.com/sbp/1370065).
 
 That is, they kind of look like they could be english words, but they're not.  Easier to remember than a random string of characters but resiliant to dictionary attacks. 
 
