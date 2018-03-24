@@ -13,6 +13,8 @@ I also came accross this:  [kchapelier/ngram-word-generator: Word generation bas
 
 Heres some sample output with word length set to between 5 and 10 characters:
 ```
+$ node p.js
+
 creebrasso-swardancers-hamperogue-broadess 
 
 pimpainds-clappille-parding-milkered 
