@@ -1,7 +1,6 @@
 /*
  * Nonsense word password generator
  *
- * TODO: test that the words are not actually english words
  *
 */
 
