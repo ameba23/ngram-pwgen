@@ -1,11 +1,13 @@
 
 ## Making a nonsense password generator
 
-I mentioned one of the issues that came up with following the guide was using an online service to generate a memorable password.  Since Kierans offline Secret sharing seems to have proved popular we thought about making a password generator.
+Using an online service to generate a memorable password seems like a bit of a security risk, so we were thinking to make one people can use offline. 
 
-Grabbing a bunch of words from a dictionary seemed too simple so i had a look at some other online password generators and the thing that interested me most was using nonsense words which follow similar phoneme frequencies as english words.  That is, they kind of look like they could be english words, but they're not.  Easier to remember than a random string of characters but resiliant to dictionary attacks. 
+Grabbing a bunch of words from a dictionary seemed too simple so i had a look at some other online password generators and the thing that interested me most was using nonsense words which follow similar phoneme frequencies as english words.
 
-The best program i found that does this is this [nonsense word generator](http://www.soybomb.com/tricks/words/).  Unfortuanately the source code is not with it, but it works using known average frequencies of phonemes (sounds) in the english language.  Somehow the words I managed to generate below just don't seem as catchy so maybe theres still work to be done.
+That is, they kind of look like they could be english words, but they're not.  Easier to remember than a random string of characters but resiliant to dictionary attacks. 
+
+The best program i found that does this is this [nonsense word generator](http://www.soybomb.com/tricks/words/).  Unfortuanately the source code is not with it, but it works using known average frequencies of phonemes (sounds) in the english language.  Somehow the words I managed to generate using the method below just don't seem as catchy so maybe theres still work to be done.
 
 ### Using [n-grams](https://en.wikipedia.org/wiki/N-gram)
 
