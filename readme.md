@@ -54,4 +54,6 @@ We can play around with different word-lists/corpus texts to maybe get some more
 * [Javascript | Secrets of the Dark](https://direclown.wordpress.com/tag/javascript/) - a review of some password generators
 * [Strong Random Password Generator](http://passwordsgenerator.net/) - Generates a password together with some words to help you remember it
 * [securepasswords - npm](https://www.npmjs.com/package/securepasswords) - node module for a password generator which is supposed to create passwords which are easy to type on english and german keyboards
+* [Electronic Frontier Foundation wordlists](https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases) along with an interesting explanation.These wordlists are used by [rempe.us/diceware/#eff](https://www.rempe.us/diceware/#eff)
 * [XKPasswd - Secure Memorable Passwords](https://xkpasswd.net/s/) - a password generator with plenty of nice features.
+* [Strong Pass - Secure Deterministic Password Generator](https://www.rempe.us/strongpass/) - a password manager, without having to keep any backups. Crazy!
