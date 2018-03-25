@@ -16,6 +16,8 @@ var lines = 10;
 var wordsPerLine = 4;
 var minWordLength = 5;
 var maxWordLength = 10;
+var seperator = '-';
+var probabilityRealWord = 0;
 
 // Create an array of the english words (is this too memory intensive?)
 var englishWords = fs.readFileSync('words.txt').toString().split("\n");
@@ -24,8 +26,11 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function generateRealWord() {
+  return englishWords[getRandomInt(0, englishWords.length - 1)];
+}
 
-function generateWord() {
+function generateNonsenceWord() {
   // test that the words generated do not exist in the dictionary
   do {
     newWord = generator(getRandomInt(minWordLength, maxWordLength));
@@ -38,8 +43,12 @@ function generateWord() {
 for (i = 0; i < lines; i++) {
   passw = '';
   for (j = 0; j < wordsPerLine; j++) {
-     passw += generateWord();
-     if (j < (wordsPerLine -1)) { passw += '-'; }
+     if (Math.random() > probabilityRealWord) {
+       passw += generateNonsenceWord();
+     } else {
+       passw += generateRealWord();
+     }
+     if (j < (wordsPerLine -1)) { passw += seperator; }
   }
   console.log(passw, '\n');
 }
