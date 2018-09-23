@@ -9,7 +9,9 @@ var makeGenerator = require('ngram-word-generator'),
 
 var generator = makeGenerator(ngramModel);
 
-var fs = require('fs');
+//var fs = require('fs');
+//var englishWords = fs.readFileSync('words.txt').toString().split("\n");
+const englishWords = require('./words.json')
 
 // These are all parameter that could be set using a web form:
 var lines = 10;
@@ -19,8 +21,6 @@ var maxWordLength = 10;
 var seperator = '-';
 var probabilityRealWord = 0;
 
-// Create an array of the english words (is this too memory intensive?)
-var englishWords = fs.readFileSync('words.txt').toString().split("\n");
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -39,7 +39,7 @@ function generateNonsenceWord() {
   return newWord;
 }
 
-
+var passwlist = '';
 for (i = 0; i < lines; i++) {
   passw = '';
   for (j = 0; j < wordsPerLine; j++) {
@@ -50,5 +50,9 @@ for (i = 0; i < lines; i++) {
      }
      if (j < (wordsPerLine -1)) { passw += seperator; }
   }
-  console.log(passw, '\n');
+  passwlist += passw;
+  passwlist += '<br>';
 }
+
+var divobj = document.getElementById('main');
+divobj.innerHTML = passwlist; 
