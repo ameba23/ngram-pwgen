@@ -47,6 +47,10 @@ We can play around with different word-lists/corpus texts to maybe get some more
 
 Clone the repository and open `index.html` in a web browser.
 
+### Building with browserify
+
+`browserify pwgen.js -o pwgenb.js`
+
 ### Next steps:
 * Add the ususall password generator features:  Mixed CaSE, numbers, punctuation characters, etc.
 * Html-ify.
