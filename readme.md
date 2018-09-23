@@ -19,8 +19,6 @@ I wrote a script to make the word length vary, and check that the generated word
 
 Heres some sample output with word length set to between 5 and 10 characters:
 ```
-$ node p.js
-
 creebrasso-swardancers-hamperogue-broadess 
 
 pimpainds-clappille-parding-milkered 
@@ -45,9 +43,13 @@ Bit of a mouthfull i know.
 
 We can play around with different word-lists/corpus texts to maybe get some more interesting ones.  
 
+### Usage:
+
+Clone the repository and open `index.html` in a web browser.
+
 ### Next steps:
 * Add the ususall password generator features:  Mixed CaSE, numbers, punctuation characters, etc.
-* Turn it into a react app and html-ify.
+* Html-ify.
 * I would be interested to combine this with something like mixing an adjective-like nonsense word with a noun-like nonsense words, a bit similar to how Debian build names are generated (Vagrant also uses this for giving a catchy name to a virtual machine).
 
 ### See also:
